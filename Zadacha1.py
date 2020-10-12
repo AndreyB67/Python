@@ -1,0 +1,5 @@
+Ctroka=input('Введите текст')
+print(type(Ctroka))
+Bulevo=bool(input("Согласны ли вы с суммой вашей премии (ответьте кратко да или нет) "))
+print(Bulevo)
+print(type(Bulevo))
