@@ -7,3 +7,4 @@ a=int(input('Введите число '))
 b=int(input('Введите число '))
 c=int(input('Введите число '))
 print (my_func(a, b, c))
+
