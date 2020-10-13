@@ -15,3 +15,4 @@ def ZaglavnayaAll(text):
 
 
 print(ZaglavnayaAll(input('Input text: ').split(' ')))
+
