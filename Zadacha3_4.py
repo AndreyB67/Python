@@ -11,3 +11,4 @@ def kvadrat_var2(x, y):
     return 1 / x
 
 print(kvadrat_var2(2, -2))
+
