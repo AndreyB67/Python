@@ -10,3 +10,4 @@ print(new_f)
 with open(r'E:\СПЕЦИАЛИСТ\GEEKBRAINS\Textovie_fales\Zadacha4_5_new.txt','w') as my_f_new:
     for element in new_f:
         print (element,file=my_f_new)
+		

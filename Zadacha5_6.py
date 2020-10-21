@@ -9,4 +9,3 @@ with open(r'E:\СПЕЦИАЛИСТ\GEEKBRAINS\Textovie_fales\Zadacha5_6_2.txt',
             continue
         subj[subject] = sum(map(int,(re.findall('\d+', lecture) + re.findall('\d+',practice) + re.findall('\d+',lab))))
     print(f'Общее количество часов по предмету - \n {subj}')
-#re.findall('\d+', lecture))
