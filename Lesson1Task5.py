@@ -1,21 +1,20 @@
+import platform
 import subprocess
+from chardet import detect
+import locale
 
 
-ping_resurs = [['ping', 'yandex.ru'],['ping', 'youtube.com']]
+urls = ['yandex.ru', 'youtube.com']
+param = '-n' if platform.system().lower()== 'windows' else '-c'
 
-for ping_now in ping_resurs:
 
-    ping_process = subprocess.Popen(ping_now, stdout=subprocess.PIPE)
+for url in urls:
+    args = ['ping', param, '4', url]
+    result = subprocess.Popen(args, stdout=subprocess.PIPE)
+    for line in result.stdout:
+        res = detect(line)
+        print('result =', res)
+        line = line.decode(res['encoding']).encode('utf-8')
+        print(line.decode('utf-8'))
 
-    i = 0
 
-    for line in ping_process.stdout:
-
-        if i<5:
-            print(line)
-            line = line.decode('cp866').encode('utf-8')
-            print(line.decode('utf-8'))
-            i += 1
-        else:
-            print('#'*30)
-            break

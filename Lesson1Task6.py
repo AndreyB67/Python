@@ -1,13 +1,17 @@
-import locale
+from chardet import detect
 
-f = open("test_file.txt", "r")
-print(f) # печатаем объект файла, что бы узнать его кодировку
+f = open("test_file",'w',encoding='utf8')
+f.write('сетевое программирование сокет декоратор')
+f.close()
 
-file_coding = locale.getpreferredencoding()
-print(file_coding)
+#+++++++++++++++++++++++++++++++++++++++++
+with open("test_file",'rb') as f:
+    conten=f.read()
+encoding=detect(conten)['encoding']
+print('encoding is:  ',encoding)
 
-# Читаем из файла
-with open('resurs.txt', 'r', encoding=file_coding) as f_n:
+with open('test_file', 'r', encoding=encoding) as f_n:
     for i in f_n:
         print(i)
+
 
