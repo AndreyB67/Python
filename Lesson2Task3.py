@@ -1,8 +1,5 @@
 import yaml
 
-# CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
-# filename = os.path.join(CURRENT_DIR, 'source_data', 'file.yaml')
-#'items': ['pound sterling', 'dollars', 'yuan', 'euro'],
 data = {
     'items': ['фунты стерлингов', 'доллары', 'юань', 'евро'],
     'items_quantity': 4,
